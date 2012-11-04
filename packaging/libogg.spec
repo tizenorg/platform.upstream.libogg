@@ -7,8 +7,6 @@ Url:            http://www.vorbis.com/
 Group:          System/Libraries
 Source:         %{name}-%{version}.tar.bz2
 Source2:        baselibs.conf
-Patch1:         lib64.dif
-Patch2:         m4.diff
 BuildRequires:  pkg-config
 
 %description
@@ -30,10 +28,6 @@ to compile and develop applications that use libogg.
 
 %prep
 %setup -q
-%patch2
-if [ "%{_lib}" == "lib64" ]; then
-%patch1
-fi
 
 %build
 # Fix optimization level
@@ -48,9 +42,7 @@ make check
 
 
 %install
-make DESTDIR=%{buildroot} docdir=%{_docdir}/%{name}-devel install
-# remove unneeded files
-rm -f %{buildroot}%{_libdir}/*.la
+%make_install
 
 %post  -p /sbin/ldconfig
 
@@ -58,7 +50,7 @@ rm -f %{buildroot}%{_libdir}/*.la
 
 %files
 %defattr(0644,root,root,0755)
-%doc AUTHORS CHANGES COPYING README
+%doc COPYING 
 %{_libdir}/libogg.so.*
 
 %files devel
