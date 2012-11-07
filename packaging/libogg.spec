@@ -44,6 +44,8 @@ make check
 %install
 %make_install
 
+%remove_docs
+
 %post  -p /sbin/ldconfig
 
 %postun  -p /sbin/ldconfig
