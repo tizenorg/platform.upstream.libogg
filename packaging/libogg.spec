@@ -55,7 +55,6 @@ make check
 
 %files devel
 %defattr(0644,root,root,0755)
-%{_docdir}/%{name}-devel
 %{_includedir}/ogg
 %{_libdir}/libogg.so
 %dir %{_datadir}/aclocal
