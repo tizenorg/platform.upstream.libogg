@@ -5,7 +5,7 @@ License:        BSD-3-Clause
 Summary:        Ogg Bitstream Library
 Url:            http://www.vorbis.com/
 Group:          System/Libraries
-Source:         %{name}-%{version}.tar.bz2
+Source:         %{name}-%{version}.tar.gz
 Source2:        baselibs.conf
 BuildRequires:  pkg-config
 
