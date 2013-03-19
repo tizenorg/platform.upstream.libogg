@@ -4,7 +4,7 @@ Release:        0
 License:        BSD-3-Clause
 Summary:        Ogg Bitstream Library
 Url:            http://www.vorbis.com/
-Group:          System/Libraries
+Group:          Multimedia/Audio
 Source:         %{name}-%{version}.tar.gz
 Source2:        baselibs.conf
 BuildRequires:  pkg-config
@@ -18,7 +18,7 @@ codec ) and the libtheora (Theora video codec)
 
 %package devel
 Summary:        Include Files and Libraries mandatory for Ogg Development
-Group:          Development/Libraries/C and C++
+Group:          Development/Libraries
 Requires:       glibc-devel
 Requires:       libogg = %{version}
 
@@ -52,7 +52,7 @@ make check
 
 %files
 %defattr(0644,root,root,0755)
-%doc COPYING 
+%license COPYING 
 %{_libdir}/libogg.so.*
 
 %files devel
