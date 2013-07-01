@@ -7,6 +7,7 @@ Url:            http://www.vorbis.com/
 Group:          Multimedia/Audio
 Source:         %{name}-%{version}.tar.gz
 Source2:        baselibs.conf
+Source1001: 	libogg.manifest
 BuildRequires:  pkg-config
 
 %description
@@ -28,6 +29,7 @@ to compile and develop applications that use libogg.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 # Fix optimization level
@@ -51,11 +53,13 @@ make check
 %postun  -p /sbin/ldconfig
 
 %files
+%manifest %{name}.manifest
 %defattr(0644,root,root,0755)
 %license COPYING 
 %{_libdir}/libogg.so.*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(0644,root,root,0755)
 %{_includedir}/ogg
 %{_libdir}/libogg.so
