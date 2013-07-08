@@ -1,0 +1,9 @@
+Change-Id: I10faa2039122db90e67336bfaeaf26978a2b49ee
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Code-Review+1: Michael Demeter <michael.demeter@intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:37:28 -0700
+Reviewed-on: https://review.tizen.org/gerrit/5200
+Project: platform/upstream/libogg
+Branch: refs/heads/tizen
