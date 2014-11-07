@@ -1,11 +1,11 @@
 Name:           libogg
-Version:        1.3.0
+Version:        1.3.2
 Release:        0
 License:        BSD-3-Clause
 Summary:        Ogg Bitstream Library
 Url:            http://www.vorbis.com/
 Group:          Multimedia/Audio
-Source:         %{name}-%{version}.tar.gz
+Source:         http://downloads.xiph.org/releases/ogg/%{name}-%{version}.tar.gz
 Source2:        baselibs.conf
 Source1001: 	libogg.manifest
 BuildRequires:  pkg-config
@@ -36,7 +36,7 @@ cp %{SOURCE1001} .
 sed -i s,-O20,-O3,g configure
 
 %configure --disable-static
-make %{?_smp_mflags}
+%__make %{?_smp_mflags}
 
 
 %check
@@ -67,4 +67,3 @@ make check
 %{_datadir}/aclocal/ogg.m4
 %{_libdir}/pkgconfig/ogg.pc
 
-%changelog
