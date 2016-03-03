@@ -1,7 +1,7 @@
 Name:           libogg
 Version:        1.3.2
 Release:        0
-License:        BSD-3-Clause
+License:        BSD-2.0
 Summary:        Ogg Bitstream Library
 Url:            http://www.vorbis.com/
 Group:          Multimedia/Audio
